@@ -31,12 +31,17 @@ const renderBooks = (arrayOfBooks) => {
     console.log("Inside the forEach()");
     console.log(book);
     console.log(book.title);
-    container.innerHTML += `<div class="card" style="width: 18rem;">
+    container.innerHTML += `<div class="card col-sm-6 col-md-4 col-lg-3" style="width: 18rem;">
     <img src="${book.img}" class="card-img-top" alt="${book.title}+ cover">
     <div class="card-body">
       <h5 class="card-title">${book.title}</h5>
       <span class="card-text">${book.category}</span>
       <span class="card-text">${book.price}</span>
+      <div class="d-flex justify-content-between">
+  <button type="button" class="btn btn-primary">Add to cart</button>
+  <button type="button" class="btn btn-secondary">Skip</button>
+</div>;
+      <div>
     </div>
   </div>`;
   });
